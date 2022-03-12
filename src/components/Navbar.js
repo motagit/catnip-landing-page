@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import './Navbar.css';
+import { useWindowDimensions } from "./utils";
+
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -12,15 +14,21 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const width = useWindowDimensions().width;
+
+  console.log(useWindowDimensions().width);
+
+
   const showButton = () => {
-    if (window.innerWidth <= 960) {
+    if (width <= 960) {
       setButton(false);
     } else {
       setButton(true);
     }
   };
 
-  window.addEventListener('resize', showButton);
+  // console.log(showButton);
+  // window.addEventListener('resize', showButton);
 
   return (
     <>
@@ -36,27 +44,27 @@ function Navbar() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               {/* scrollLink */}
-              <div className="nav-links">ABOUT US</div>
+              <span className="nav-links">ABOUT US</span>
             </li>
             <li className="nav-item">
               {/* scrollLink */}
-              <div className="nav-links">ADOPTION</div>
+              <span className="nav-links">ADOPTION</span>
             </li>
             <li className="nav-item">
               {/* scrollLink */}
-              <div className="nav-links">HELP US</div>
+              <span className="nav-links">HELP US</span>
             </li>
             <li className="nav-item">
               {/* scrollLink */}
-              <div className="nav-links">CONTACT</div>
+              <span className="nav-links">CONTACT</span>
             </li>
             <li className='nav-btn'>
-                {button ? (
-                  <Link to='/sign-up' className='btn-link'>
-                    <Button buttonStyle='btn--outline' buttonColor='primary'>DONATE</Button>
+                {width >= 960 ? (
+                  <Link to='' className='btn-link'>
+                    <Button buttonStyle='btn--primary'>DONATE</Button>
                   </Link>
                 ) : (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to='' className='btn-link'>
                     <Button
                       buttonStyle='btn--medium'
                       

@@ -1,42 +1,31 @@
 .navbar {
   background: #fff;
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-size: 16px;
   position: sticky;
   top: 0;
   z-index: 999;
+  border: 1px solid gray;
 }
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
-  height: 80px;
-}
-
-.container {
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  justify-content: flex-end;
+  height: 9.375rem;
 }
 
 .navbar-logo {
   color: #fff;
-  justify-self: start;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: auto;
+  margin-left: 10rem;
 }
 .navbar-logo img {
-  width: 200px;
+  width: 12.5rem;
 }
 
 .nav-menu {
@@ -45,23 +34,26 @@
   justify-content: center;
   list-style: none;
   text-align: center;
-  justify-content: end;
+  margin-right: 10rem;
 }
 
-.nav-item {
+.nav-item span {
   height: 80px;
-  /* border-bottom: 2px solid transparent; */
+  cursor: pointer;
+  transition: all 200ms ease-in;
 }
 
-/* .nav-item:hover {
-    border-bottom: 2px solid #f00946;
-  } */
+.nav-item span:hover {
+  color: #FEC63E;
+}
 
 .nav-links {
   color: #000;
+  font-weight: 600;
   display: flex;
   align-items: center;
   text-decoration: none;
+  justify-content: flex-end;
   padding: 0.5rem 1rem;
   height: 100%;
 }
@@ -72,6 +64,16 @@
 
 .menu-icon {
   display: none;
+}
+
+@media screen and (max-width: 1360px) {
+  .nav-menu {
+    margin-right: 2rem;
+  }
+
+  .navbar-logo {
+    margin-left: 2rem;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -91,8 +93,13 @@
     transition: all 0.5s ease;
   }
 
+  .navbar,
+  .navbar-container {
+    height: 100px;
+  }
+
   .nav-menu.active {
-    background: #1c2237;
+    background: #fff;
     left: 0;
     opacity: 1;
     transition: all 0.6s ease;
@@ -106,15 +113,12 @@
     display: table;
   }
 
-  .nav-links:hover {
+  /* .nav-links:hover {
     color: #f00946;
     transform: scale(1.2);
     transition: all 0.3s ease;
-  }
+  } */
 
-  .nav-item:hover {
-    border: none;
-  }
 
   .nav-item {
     width: 100%;
@@ -124,7 +128,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(25%, 50%);
+    transform: translate(15%, 50%);
   }
 
   .menu-icon {
@@ -132,7 +136,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 90%);
     font-size: 1.8rem;
     cursor: pointer;
   }
