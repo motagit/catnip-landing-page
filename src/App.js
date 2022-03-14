@@ -6,13 +6,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Home from './components/pages/HomePage/Home';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' />
+        <Route path='/' exact element={<Home />} />
       </Routes>
     </Router>
   );

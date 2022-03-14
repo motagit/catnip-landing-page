@@ -4,13 +4,12 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  border: 1px solid gray;
 }
 
 .navbar-container {
   display: flex;
   justify-content: flex-end;
-  height: 9.375rem;
+  height: 8.375rem;
 }
 
 .navbar-logo {

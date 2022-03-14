@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { Button } from "./Button";
-import './Navbar.css';
-import { useWindowDimensions } from "./utils";
+import React, { useState, useEffect } from "react"
+import { FaBars, FaTimes } from "react-icons/fa"
+import { Link } from "react-router-dom"
+import { Button } from "./Button"
+import './Navbar.css'
+import { useWindowDimensions } from "./utils"
 
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  // const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -18,25 +17,14 @@ function Navbar() {
 
   console.log(useWindowDimensions().width);
 
-
-  const showButton = () => {
-    if (width <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  // console.log(showButton);
-  // window.addEventListener('resize', showButton);
-
   return (
     <>
       <div className="navbar">
         <div className="navbar-container">
-          {/* scrollLink  */}
           <div className="navbar-logo">
-            <img src={logo} alt="" />
+            <a href="/">
+              <img src='logo.svg' alt="" />
+            </a>
           </div>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
