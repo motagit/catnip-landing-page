@@ -1,0 +1,41 @@
+.adopt-section {
+  background-color: #FEC63E;
+  
+  
+    .adopt-row {
+      align-items: center;
+    }
+    
+    .adopt-text-wrapper {
+      max-width: 700px;
+      // padding: 0 0 120px 0;
+      margin-left: 50px;
+    }
+
+    .heading {
+      // margin-bottom: 24px;
+      font-size: 4vw;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 auto;
+    }
+
+    .heading::after {
+      content: "";
+      display: block;
+      border-bottom: 5px solid #fff;
+      border-radius: 10px;
+      width: 40%;
+      position: relative;
+      bottom: -6px; 
+      margin: 0 auto;
+    }
+    
+}
+  
+  @media screen and (max-width: 768px) {
+    .adopt-text-wrapper {
+      padding-bottom: 65px;
+      margin: 0;
+    }
+  }

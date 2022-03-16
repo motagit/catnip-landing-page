@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button } from './Button.js'
-import './HeroSection.scss'
+import './InfoSection.scss'
 
-function HeroSection({
+function InfoSection({
+    sectionName,
     headLine, 
     description,
     buttonLabel, 
@@ -12,14 +13,14 @@ function HeroSection({
 }) {
   return (
     <>
-        <div className="home__hero-section">
+        <div className='info-section' id={sectionName}>
             <div className="container">
-                <div className="row home__hero-row"
+                <div className="row info-row"
                 style={{display: 'flex', flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'}}>
                     <div className="col">
-                        <div className="home__hero-text-wrapper">
+                        <div className="info-text-wrapper">
                             <h1 className='heading'>{headLine}</h1>
-                            <p className='home__hero-subtitle'>{description}</p>
+                            <p className='info-subtitle'>{description}</p>
                             {buttonLabel && (
                             <a href="#">
                                 <Button buttonSize='btn--large'>
@@ -30,8 +31,8 @@ function HeroSection({
                         </div>
                     </div>
                     <div className="col">
-                        <div className="home__hero-img-wrapper" style={{marginLeft: imgStart === 'row-reverse' && '40px'}}>
-                            <img src={imgSrc} alt={imgAlt} className="home__hero-img" />
+                        <div className="info-img-wrapper" style={{marginLeft: imgStart === 'row-reverse' && '40px'}}>
+                            <img src={imgSrc} alt={imgAlt} className="info-img" />
                         </div>
                     </div>
                 </div>
@@ -41,4 +42,4 @@ function HeroSection({
   )
 }
 
-export default HeroSection
+export default InfoSection
