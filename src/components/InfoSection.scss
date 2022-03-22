@@ -1,6 +1,11 @@
 .info-section {
   color: #000;
   padding: 0 0 160px 0;
+
+  .container {
+    max-width: 70vw;
+    height: 80vh;
+  }
   
   .info-row {
     align-items: center;

@@ -16,11 +16,3 @@ export const homeObjSecond = {
     imgAlt: 'About Us',
     imgStart: 'row-reverse'
 }
-
-export const homeobjThird = {
-    sectionName: 'adopt',
-    headLine: 'How to adopt',
-    imgSrc: 'images/about.svg',
-    imgAlt: 'About Us',
-    imgStart: 'row-reverse'
-}
