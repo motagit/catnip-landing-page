@@ -1,9 +1,8 @@
-:root {
-    --primary: #FEC63E;
-    --hover: #EEA901;
-    --text-color: #000;
-    --default-transition: all 200ms ease-in;
-}
+
+$primary: #FEC63E;
+$hover: #EEA901;
+$text-color: #000;
+$default-transition: all 200ms ease-in;
 
 .btn {
     padding: 8px 20px;
@@ -15,18 +14,18 @@
 }
 
 .btn--primary {
-    background-color: var(--primary);
-    color: var(--text-color);
-    border: 1px solid var(--primary);
+    background-color: $primary;
+    color: $text-color;
+    border: 1px solid $primary;
     
 }
 
 .btn--outline {
     background-color: transparent;
-    color: var(--text-color);
+    color: $text-color;
     padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: var(--default-transition);
+    border: 1px solid $primary;
+    transition: $default-transition;
 }
 
 .btn--medium {
@@ -47,10 +46,10 @@
     text-decoration: none;
     font-size: 1.5rem;
     background-color: transparent;
-    color: var(--text-color);
+    color: $text-color;
     padding: 14px 20px;
     border: 1px solid #fff;
-    transition: var(--default-transition);
+    transition: $default-transition;
     border-radius: 25px;
 }
 
@@ -67,8 +66,8 @@
 }
 
 .btn--wide:hover {
-    color: var(--text-color);
-    background-color: var(--hover);
+    color: $text-color;
+    background-color: $hover;
 }
 
 .btn-link {
@@ -82,16 +81,16 @@
 }
 
 .primary {
-    background-color: var(--primary);
-    color: var(--text-color);
+    background-color: $primary;
+    color: $text-color;
     font-weight: 600;
     border: none;
-    transition: var(--default-transition);
+    transition: $default-transition;
 }
 
 .primary:hover {
-    background-color: var(--hover);
-    color: var(--text-color);
+    background-color: $hover;
+    color: $text-color;
     border: none;
 }
 
