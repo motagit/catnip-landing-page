@@ -1,18 +1,17 @@
 $main-color: #FEC63E;
 
-.adopt-section {
-  background-color: $main-color;
+.cats-section {
   padding-bottom: 130px;
 
     .heading {
-      color: #fff;
+      color: #000;
       margin: 0 auto;
     }
 
     .heading::after {
       content: "";
       display: block;
-      border-bottom: 5px solid #fff;
+      border-bottom: 5px solid #000;
       border-radius: 10px;
       width: 40%;
       position: relative;
@@ -20,8 +19,9 @@ $main-color: #FEC63E;
       margin: 0 auto;
     }
 
-    .adopt-container-slides {
+    .cats-container-slides {
       width: 100%;
+      // max-width: 70vw;
       max-width: 70vw;
       margin-right: auto;
       margin-left: auto;
@@ -76,9 +76,9 @@ $main-color: #FEC63E;
 }
 
   
-  @media screen and (max-width: 768px) {
-    .adopt-text-wrapper {
-      padding-bottom: 65px;
-      margin: 0;
-    }
+@media screen and (max-width: 768px) {
+  .adopt-text-wrapper {
+    padding-bottom: 65px;
+    margin: 0;
   }
+}
