@@ -16,3 +16,13 @@ export const homeObjSecond = {
     imgAlt: 'About Us',
     imgStart: 'row-reverse'
 }
+
+export const homeObjThird = {
+    sectionName: 'about',
+    headLine: 'How can you help us',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Vulputate eu scelerisque felis imperdiet proin fermentum leo. Sed vulputate mi sit amet mauris. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. At imperdiet dui accumsan sit amet nulla facilisi morbi. Diam phasellus vestibulum lorem sed risus ultricies tristique.',
+    buttonLabel: 'DONATE',
+    imgSrc: 'images/help-us.svg',
+    imgAlt: 'How can you help us',
+    imgStart: 'start'
+}
