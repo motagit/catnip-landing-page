@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import { Button } from "./Button"
-import './Navbar.css'
+import './Navbar.scss'
 import { useWindowDimensions } from "./utils"
+import {animateScroll as scroll} from 'react-scroll'
 
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  // const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -17,21 +17,24 @@ function Navbar() {
 
   console.log(useWindowDimensions().width);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
+
   return (
     <>
       <div className="navbar">
         <div className="navbar-container">
-          <div className="navbar-logo">
-            <a href="/">
-              <img src='logo.svg' alt="" />
-            </a>
+          <div className="navbar-logo" onClick={toggleHome}>
+            <Link to='/'>
+              <img src='logo-remake-yellow.svg' alt="Catnip" />
+            </Link>
           </div>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              {/* scrollLink */}
               <span className="nav-links">ABOUT US</span>
             </li>
             <li className="nav-item">
@@ -41,10 +44,6 @@ function Navbar() {
             <li className="nav-item">
               {/* scrollLink */}
               <span className="nav-links">HELP US</span>
-            </li>
-            <li className="nav-item">
-              {/* scrollLink */}
-              <span className="nav-links">CONTACT</span>
             </li>
             <li className='nav-btn'>
                 {width >= 960 ? (

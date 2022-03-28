@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
@@ -7,6 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import Home from './components/pages/HomePage/Home';
+import Footer from './components/pages/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

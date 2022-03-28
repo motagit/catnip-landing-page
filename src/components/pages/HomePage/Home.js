@@ -1,12 +1,17 @@
 import React from 'react'
-import HeroSection from '../../HeroSection'
-import {homeObjOne, homeObjSecond} from './Data'
+import AdoptedCats from '../../AdoptedCats'
+import AdoptSection from '../../AdoptSection'
+import InfoSection from '../../InfoSection'
+import {homeObjOne, homeObjSecond, homeObjThird} from './InfoData'
 
 function Home() {
   return (
     <>
-        <HeroSection {...homeObjOne} />
-        <HeroSection {...homeObjSecond} />
+        <InfoSection {...homeObjOne} id="top" />
+        <InfoSection {...homeObjSecond} id='about' />
+        <AdoptSection id='adopt'/>
+        <AdoptedCats id='cats'/>
+        <InfoSection {...homeObjThird} id='help' />
     </>
   )
 }
