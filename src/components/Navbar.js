@@ -27,7 +27,7 @@ function Navbar() {
         <div className="navbar-container">
           <div className="navbar-logo" onClick={toggleHome}>
             <Link to='/'>
-              <img src='logo.svg' alt="Catnip" />
+              <img src='logo-remake-yellow.svg' alt="Catnip" />
             </Link>
           </div>
           <div className="menu-icon" onClick={handleClick}>
@@ -44,10 +44,6 @@ function Navbar() {
             <li className="nav-item">
               {/* scrollLink */}
               <span className="nav-links">HELP US</span>
-            </li>
-            <li className="nav-item">
-              {/* scrollLink */}
-              <span className="nav-links">CONTACT</span>
             </li>
             <li className='nav-btn'>
                 {width >= 960 ? (
