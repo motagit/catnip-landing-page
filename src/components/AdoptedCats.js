@@ -3,7 +3,7 @@ import './AdoptedCats.scss'
 import "swiper/css";
 import 'swiper/css/navigation';
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { cats } from "./pages/HomePage/CatsData";
 
@@ -19,7 +19,7 @@ function AdoptedCats() {
             <div className="cats-container-slides">
                 <div className="row swiper-row">
                     <Swiper
-                        modules={[Navigation, Pagination]}
+                        modules={[Pagination, Autoplay]}
                         breakpoints={{
                             640: {
                                 slidesPerView: 1,
@@ -36,9 +36,13 @@ function AdoptedCats() {
                         }}
                         pagination={{
                             dynamicBullets: true,
-                          }}
+                        }}
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false,
+                        }}
                         spaceBetween={30}
-                        navigation={true}
+                        centeredSlides={true}
                         slidesPerView='auto'
                         className="mySwiper"
                     >
@@ -47,7 +51,8 @@ function AdoptedCats() {
                         <SwiperSlide>
                             <div className="card">
                                 <img src={card.imgSrc} alt={card.imgAlt}/>
-                                <h1>{card.headLine}</h1>
+                                <h1>{card.name}</h1>
+                                <small>Adopted with {card.age}</small>
                                 <p class="text">{card.description}</p>
                             </div>
                         </SwiperSlide>
