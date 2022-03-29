@@ -1,33 +1,31 @@
 import React from 'react'
-import './AdoptedCats.scss'
+import './AdoptSection.scss'
 import "swiper/css";
 import 'swiper/css/navigation';
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { cats } from "./pages/HomePage/CatsData";
+import { AdoptCard } from "./data/AdoptData.js";
 
-function AdoptedCats() {
+function AdoptSection() {
   return (
     <>
-        <div className='cats-section' id='adopt'>
+    <img src={process.env.PUBLIC_URL + "/images/svg-retangulo.svg"} alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
+        <div className='adopt-section' id='adopt'>
             <div className="container">
-                <div className="row">
-                    <h1 className='heading'>Adopted Cats</h1>
+                <div className="row adopt-row">
+                    <h1 className='heading'>How to Adopt</h1>
                 </div>
             </div>
-            <div className="cats-container-slides">
-                <div className="row swiper-row">
+            <div className="adopt-container-slides">
+                <div className="row">
                     <Swiper
-                        modules={[Pagination, Autoplay]}
+                        modules={[Navigation, Pagination]}
                         breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                            },
-                            768: {
+                            880: {
                                 slidesPerView: 2,
                             },
-                            1090: {
+                            1200: {
                                 slidesPerView: 3,
                             },
                             1550: {
@@ -36,23 +34,18 @@ function AdoptedCats() {
                         }}
                         pagination={{
                             dynamicBullets: true,
-                        }}
-                        autoplay={{
-                            delay: 3500,
-                            disableOnInteraction: false,
-                        }}
+                          }}
                         spaceBetween={30}
-                        centeredSlides={true}
+                        navigation={true}
                         slidesPerView='auto'
                         className="mySwiper"
                     >
 
-                    {cats.map(card => 
+                    {AdoptCard.map(card => 
                         <SwiperSlide>
                             <div className="card">
-                                <img src={card.imgSrc} alt={card.imgAlt}/>
-                                <h1>{card.name}</h1>
-                                <small>Adopted with {card.age}</small>
+                                <img src={process.env.PUBLIC_URL + card.imgSrc} alt={card.imgAlt}/>
+                                <h1>{card.headLine}</h1>
                                 <p class="text">{card.description}</p>
                             </div>
                         </SwiperSlide>
@@ -64,8 +57,9 @@ function AdoptedCats() {
 
             </div>
         </div>
+    <img src={process.env.PUBLIC_URL + "/images/svg-retangulo-baixo.svg"} alt="" style={{width: '100%',marginTop: '-10px'}}/>
     </>
   )
 }
 
-export default AdoptedCats
+export default AdoptSection

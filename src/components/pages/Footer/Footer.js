@@ -11,14 +11,12 @@ import {
 function Footer() {
   return (
   <>
-    <img src="/images/wave.svg" alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
+    <img src={process.env.PUBLIC_URL + "/images/wave.svg"} alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
       <div className='footer-container'>
         <section className='social-media'>
           <div className='social-media-wrap'>
             <div className='footer-logo'>
-              <Link to='/'>
-                <img src='logo-remake-black.svg' alt="Catnip" />
-              </Link>
+              <img src={process.env.PUBLIC_URL + '/logo-remake-black.svg'} alt="Catnip" />
             </div>
 
             <small>Catnip © 2022</small>

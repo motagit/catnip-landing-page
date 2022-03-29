@@ -1,7 +1,9 @@
 $main-color: #FEC63E;
 
 .cats-section {
-  padding-bottom: 260px;
+  padding-bottom: 360px;
+  margin-top: 40px;
+  // height: 80vh;
   
 
     .heading {
@@ -14,7 +16,7 @@ $main-color: #FEC63E;
       display: block;
       border-bottom: 5px solid #000;
       border-radius: 10px;
-      width: 40%;
+      width: 20%;
       position: relative;
       bottom: -6px; 
       margin: 0 auto;
@@ -51,8 +53,8 @@ $main-color: #FEC63E;
       }
 
       img { 
-        width: 400px; 
-        height: 260px; 
+        width: 90%; 
+        height: 80%; 
         overflow: hidden; 
         border-radius: 25px; 
 
@@ -61,24 +63,23 @@ $main-color: #FEC63E;
         box-shadow: 5px 5px 2px #ccc
       }
     }
+
+    .swiper {
+      width: 100%;
+      height: 550px !important;
+    }
+    
+    .swiper-slide {
+      background: #fff;
+      width: 340px;
+      border-radius: 30px;
+      height: 800px;
+    }
 }
 
-.swiper {
-  width: 100%;
-  height: 550px !important;
-}
 
-.swiper-slide {
-  background: #fff;
-  width: 340px;
-  border-radius: 30px;
-  height: 800px;
-}
-
-  
 @media screen and (max-width: 768px) {
-  .adopt-text-wrapper {
-    padding-bottom: 65px;
-    margin: 0;
+  .cats-section {
+    padding-bottom: 240px;
   }
 }

@@ -9,8 +9,6 @@ $main-color: #FEC63E;
     align-items: center;
 
     .footer-logo {
-        cursor: pointer;
-    
         img {
             width: 9.5rem;
         }
@@ -47,6 +45,10 @@ $main-color: #FEC63E;
         justify-content: space-between;
         align-items: center;
         width: 240px;
+    }
+
+    small {
+        padding: 10px;
     }
 }
 

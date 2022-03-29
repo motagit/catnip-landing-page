@@ -2,7 +2,7 @@
   "name": "catnip-landing-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://motagit.github.io/",
+  "homepage": "https://motagit.github.io/catnip-landing-page/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.16.2",

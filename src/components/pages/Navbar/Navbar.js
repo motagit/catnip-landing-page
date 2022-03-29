@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link } from "react-router-dom"
-import { Button } from "./Button"
+import { Button } from "../../Button"
 import './Navbar.scss'
-import { useWindowDimensions } from "./utils"
+import { useWindowDimensions } from "../../utils"
 import {animateScroll as scroll} from 'react-scroll'
 
 
@@ -26,9 +26,7 @@ function Navbar() {
       <div className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo" onClick={toggleHome}>
-            <Link to='/'>
-              <img src='logo-remake-yellow.svg' alt="Catnip" />
-            </Link>
+            <img src={process.env.PUBLIC_URL  + '/logo-remake-yellow.svg'} alt="Catnip" />
           </div>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
