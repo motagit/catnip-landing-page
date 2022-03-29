@@ -10,7 +10,7 @@ import { AdoptCard } from "./pages/HomePage/AdoptData.js";
 function AdoptSection() {
   return (
     <>
-    <img src="/images/svg-retangulo.svg" alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
+    <img src={process.env.PUBLIC_URL + "/images/svg-retangulo.svg"} alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
         <div className='adopt-section' id='adopt'>
             <div className="container">
                 <div className="row adopt-row">
@@ -47,7 +47,7 @@ function AdoptSection() {
                     {AdoptCard.map(card => 
                         <SwiperSlide>
                             <div className="card">
-                                <img src={card.imgSrc} alt={card.imgAlt}/>
+                                <img src={process.env.PUBLIC_URL + card.imgSrc} alt={card.imgAlt}/>
                                 <h1>{card.headLine}</h1>
                                 <p class="text">{card.description}</p>
                             </div>
@@ -60,7 +60,7 @@ function AdoptSection() {
 
             </div>
         </div>
-    <img src="/images/svg-retangulo-baixo.svg" alt="" style={{width: '100%',marginTop: '-10px'}}/>
+    <img src={process.env.PUBLIC_URL + "/images/svg-retangulo-baixo.svg"} alt="" style={{width: '100%',marginTop: '-10px'}}/>
     </>
   )
 }

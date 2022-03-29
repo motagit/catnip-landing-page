@@ -32,7 +32,7 @@ function InfoSection({
                     </div>
                     <div className="col">
                         <div className="info-img-wrapper" style={{marginLeft: imgStart === 'row-reverse' && '40px'}}>
-                            <img src={imgSrc} alt={imgAlt} className="info-img" />
+                            <img src={process.env.PUBLIC_URL + imgSrc} alt={imgAlt} className="info-img" />
                         </div>
                     </div>
                 </div>

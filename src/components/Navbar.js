@@ -27,7 +27,7 @@ function Navbar() {
         <div className="navbar-container">
           <div className="navbar-logo" onClick={toggleHome}>
             <Link to='/'>
-              <img src='logo-remake-yellow.svg' alt="Catnip" />
+              <img src={process.env.PUBLIC_URL  + '/logo-remake-yellow.svg'} alt="Catnip" />
             </Link>
           </div>
           <div className="menu-icon" onClick={handleClick}>

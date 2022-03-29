@@ -50,7 +50,7 @@ function AdoptedCats() {
                     {cats.map(card => 
                         <SwiperSlide>
                             <div className="card">
-                                <img src={card.imgSrc} alt={card.imgAlt}/>
+                                <img src={process.env.PUBLIC_URL + card.imgSrc} alt={card.imgAlt}/>
                                 <h1>{card.name}</h1>
                                 <small>Adopted with {card.age}</small>
                                 <p class="text">{card.description}</p>
