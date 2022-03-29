@@ -16,9 +16,7 @@ function Footer() {
         <section className='social-media'>
           <div className='social-media-wrap'>
             <div className='footer-logo'>
-              <Link to='/catnip-landing-page'>
-                <img src={process.env.PUBLIC_URL + '/logo-remake-black.svg'} alt="Catnip" />
-              </Link>
+              <img src={process.env.PUBLIC_URL + '/logo-remake-black.svg'} alt="Catnip" />
             </div>
 
             <small>Catnip © 2022</small>
