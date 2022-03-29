@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { AdoptCard } from "./pages/HomePage/AdoptData.js";
+import { AdoptCard } from "./data/AdoptData.js";
 
 function AdoptSection() {
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
-import AdoptedCats from '../../AdoptedCats'
-import AdoptSection from '../../AdoptSection'
-import InfoSection from '../../InfoSection'
-import {homeObjOne, homeObjSecond, homeObjThird} from './InfoData'
+import AdoptedCats from './AdoptedCats'
+import AdoptSection from './AdoptSection'
+import InfoSection from './InfoSection'
+import {homeObjOne, homeObjSecond, homeObjThird} from './data/InfoData'
 
 function Home() {
   return (

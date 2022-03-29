@@ -1,5 +1,5 @@
 import './App.scss';
-import Navbar from './components/Navbar';
+import Navbar from './components/pages/Navbar/Navbar';
 import {
   BrowserRouter as Router,
   Routes,

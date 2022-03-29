@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { Link } from "react-router-dom"
-import { Button } from "./Button"
+import { Button } from "../../Button"
 import './Navbar.scss'
-import { useWindowDimensions } from "./utils"
+import { useWindowDimensions } from "../../utils"
 import {animateScroll as scroll} from 'react-scroll'
 
 

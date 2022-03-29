@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { cats } from "./pages/HomePage/CatsData";
+import { cats } from "./data/CatsData";
 
 function AdoptedCats() {
   return (
