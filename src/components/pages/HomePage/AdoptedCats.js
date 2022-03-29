@@ -20,20 +20,7 @@ function AdoptedCats() {
                 <div className="row swiper-row">
                     <Swiper
                         modules={[Pagination, Autoplay]}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                            },
-                            1090: {
-                                slidesPerView: 3,
-                            },
-                            1550: {
-                                slidesPerView: 4,
-                            }
-                        }}
+                        
                         pagination={{
                             dynamicBullets: true,
                         }}

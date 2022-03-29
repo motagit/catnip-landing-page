@@ -22,13 +22,10 @@ function AdoptSection() {
                     <Swiper
                         modules={[Navigation, Pagination]}
                         breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                            },
-                            768: {
+                            880: {
                                 slidesPerView: 2,
                             },
-                            1090: {
+                            1200: {
                                 slidesPerView: 3,
                             },
                             1550: {
