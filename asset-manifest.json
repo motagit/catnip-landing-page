@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/catnip-landing-page/static/css/main.c5b9dba4.css",
-    "main.js": "/catnip-landing-page/static/js/main.462c8933.js",
+    "main.css": "/catnip-landing-page/static/css/main.f0ab293b.css",
+    "main.js": "/catnip-landing-page/static/js/main.62be45b6.js",
     "index.html": "/catnip-landing-page/index.html",
-    "main.c5b9dba4.css.map": "/catnip-landing-page/static/css/main.c5b9dba4.css.map",
-    "main.462c8933.js.map": "/catnip-landing-page/static/js/main.462c8933.js.map"
+    "main.f0ab293b.css.map": "/catnip-landing-page/static/css/main.f0ab293b.css.map",
+    "main.62be45b6.js.map": "/catnip-landing-page/static/js/main.62be45b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5b9dba4.css",
-    "static/js/main.462c8933.js"
+    "static/css/main.f0ab293b.css",
+    "static/js/main.62be45b6.js"
   ]
 }
