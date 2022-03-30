@@ -4,7 +4,9 @@
 
   .container {
     max-width: 70vw;
-    height: 80vh;
+    // height: 100%;
+    margin-bottom: 120px;
+    
   }
   
   .info-row {
@@ -63,8 +65,15 @@
 }
   
 @media screen and (max-width: 768px) {
-  .info-section .info-text-wrapper {
-    padding-bottom: 65px;
-    margin: 0;
+  .info-section {
+    padding: 0px;
+
+    .info-text-wrapper {
+      padding-bottom: 65px;
+      padding-top: 35px;
+      margin: 0;
+    }
   }
+  
+  
 }

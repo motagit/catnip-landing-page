@@ -1,7 +1,7 @@
 $main-color: #FEC63E;
 
 .cats-section {
-  padding-bottom: 360px;
+  padding-bottom: 120px;
   margin-top: 40px;
   // height: 80vh;
   
@@ -26,7 +26,7 @@ $main-color: #FEC63E;
       width: 100%;
       margin-right: auto;
       margin-left: auto;
-      height: 60vh;
+      // height: 60vh;
 
       .row {
         padding-top: 120px;
@@ -80,6 +80,13 @@ $main-color: #FEC63E;
 
 @media screen and (max-width: 768px) {
   .cats-section {
-    padding-bottom: 240px;
+    .swiper {
+      height: 520px !important;
+    }
+    .cats-container-slides .row {
+      padding-top: 60px;
+    }
   }
+
+
 }

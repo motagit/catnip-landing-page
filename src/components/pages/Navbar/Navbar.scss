@@ -4,6 +4,8 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .navbar-container {
@@ -110,13 +112,6 @@
     display: table;
   }
 
-  /* .nav-links:hover {
-    color: #f00946;
-    transform: scale(1.2);
-    transition: all 0.3s ease;
-  } */
-
-
   .nav-item {
     width: 100%;
   }
@@ -125,7 +120,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(15%, 50%);
+    transform: translate(0, 40%);
   }
 
   .menu-icon {
@@ -133,7 +128,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 90%);
+    transform: translate(-100%, 100%);
     font-size: 1.8rem;
     cursor: pointer;
   }

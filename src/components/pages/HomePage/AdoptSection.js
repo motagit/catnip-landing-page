@@ -23,7 +23,7 @@ function AdoptSection() {
                         modules={[Navigation, Pagination]}
                         breakpoints={{
                             880: {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                             },
                             1200: {
                                 slidesPerView: 3,
@@ -34,9 +34,10 @@ function AdoptSection() {
                         }}
                         pagination={{
                             dynamicBullets: true,
-                          }}
-                        spaceBetween={30}
+                        }}
+                        
                         navigation={true}
+                        spaceBetween={30}
                         slidesPerView='auto'
                         className="mySwiper"
                     >
