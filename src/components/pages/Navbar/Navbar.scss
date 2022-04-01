@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom: 1px solid rgb(231, 231, 231);
 }
 
 .navbar-container {
@@ -38,6 +39,12 @@
   height: 80px;
   cursor: pointer;
   transition: all 200ms ease-in;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav-item span:hover {
@@ -55,10 +62,6 @@
   height: 100%;
 }
 
-.fa-bars {
-  color: #fff;
-}
-
 .menu-icon {
   display: none;
 }
@@ -74,10 +77,6 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -110,13 +109,6 @@
     display: table;
   }
 
-  /* .nav-links:hover {
-    color: #f00946;
-    transform: scale(1.2);
-    transition: all 0.3s ease;
-  } */
-
-
   .nav-item {
     width: 100%;
   }
@@ -125,7 +117,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(15%, 50%);
+    transform: translate(0, 40%);
   }
 
   .menu-icon {
@@ -133,14 +125,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 90%);
+    transform: translate(-100%, 100%);
     font-size: 1.8rem;
     cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
   }
 
   .nav-btn {
