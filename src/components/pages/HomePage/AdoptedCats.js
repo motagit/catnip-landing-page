@@ -28,6 +28,7 @@ function AdoptedCats() {
                             delay: 3500,
                             disableOnInteraction: false,
                         }}
+                        grabCursor={true}
                         spaceBetween={30}
                         centeredSlides={true}
                         slidesPerView='auto'
@@ -44,11 +45,8 @@ function AdoptedCats() {
                             </div>
                         </SwiperSlide>
                     )}
-                    </Swiper>
-
-                    
+                    </Swiper> 
                 </div>
-
             </div>
         </div>
     </>

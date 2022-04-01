@@ -7,11 +7,12 @@ import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { AdoptCard } from "./data/AdoptData.js";
 
-function AdoptSection() {
+function AdoptSection(props) {
+    console.log(props);
   return (
     <>
     <img src={process.env.PUBLIC_URL + "/images/svg-retangulo.svg"} alt="" style={{width: '100%',marginTop: '-300px', marginBottom: '-10px'}}/>
-        <div className='adopt-section' id='adopt'>
+        <div className='adopt-section' id='adopt' ref={props.reference}>
             <div className="container">
                 <div className="row adopt-row">
                     <h1 className='heading'>How to Adopt</h1>
@@ -32,10 +33,6 @@ function AdoptSection() {
                                 slidesPerView: 4,
                             }
                         }}
-                        pagination={{
-                            dynamicBullets: true,
-                        }}
-                        
                         navigation={true}
                         spaceBetween={30}
                         slidesPerView='auto'
@@ -52,10 +49,7 @@ function AdoptSection() {
                         </SwiperSlide>
                     )}
                     </Swiper>
-
-                    
                 </div>
-
             </div>
         </div>
     <img src={process.env.PUBLIC_URL + "/images/svg-retangulo-baixo.svg"} alt="" style={{width: '100%',marginTop: '-10px'}}/>

@@ -7,19 +7,28 @@ import { useWindowDimensions } from "../../utils"
 import {animateScroll as scroll} from 'react-scroll'
 
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   const width = useWindowDimensions().width;
-
   console.log(useWindowDimensions().width);
 
   const toggleHome = () => {
     scroll.scrollToTop();
   }
+
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop - 160,
+      behavior: 'smooth',
+    });
+    if (width <= 960) {
+      closeMobileMenu();
+    }
+  };
 
   return (
     <>
@@ -32,15 +41,13 @@ function Navbar() {
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <span className="nav-links">ABOUT US</span>
+            <li className="nav-item" onClick={() => scrollToSection(props.reference.about)}>
+              <span className="nav-links">ABOUT</span>
             </li>
-            <li className="nav-item">
-              {/* scrollLink */}
+            <li className="nav-item" onClick={() => scrollToSection(props.reference.adoption)}>
               <span className="nav-links">ADOPTION</span>
             </li>
-            <li className="nav-item">
-              {/* scrollLink */}
+            <li className="nav-item" onClick={() => scrollToSection(props.reference.help)}>
               <span className="nav-links">HELP US</span>
             </li>
             <li className='nav-btn'>

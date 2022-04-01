@@ -34,6 +34,14 @@ $main-color: #FEC63E;
     .card {
       padding: 30px;
 
+      h1, .text, img {
+        -webkit-touch-callout: none;
+        -khtml-user-select: none; 
+        -moz-user-select: none; 
+        -ms-user-select: none;
+        user-select: none;
+      }
+
       h1 {
         color: $main-color;
         margin-top: 30px;
@@ -45,7 +53,6 @@ $main-color: #FEC63E;
       }
 
       img {
-        // margin-top: 30px;
         height: 138px;
       }
     }
@@ -63,20 +70,22 @@ $main-color: #FEC63E;
 }
 
 @media screen and (max-width: 840px) {
-  .adopt-section .adopt-container-slides {
-    max-width: 90%;
-  }
-  .adopt-section .adopt-container-slides .row {
-    padding-top: 60px;
+  .adopt-section {
+    padding-top: 65px;
+
+    .adopt-container-slides {
+      max-width: 90%;
+
+      .row {
+        padding-top: 60px;
+      }
+    }
   }
 }
 
   
 @media screen and (max-width: 768px) {
-
   .adopt-section .swiper-slide {
     width: 300px;
   }
-
-  
 }
