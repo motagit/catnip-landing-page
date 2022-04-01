@@ -35,7 +35,7 @@ function Navbar(props) {
       <div className="navbar">
         <div className="navbar-container">
           <div className="navbar-logo" onClick={toggleHome}>
-            <img src={process.env.PUBLIC_URL  + '/logo-remake-yellow.svg'} alt="Catnip" />
+            <img src={process.env.PUBLIC_URL  + '/images/logo-remake-yellow.svg'} alt="Catnip" />
           </div>
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
